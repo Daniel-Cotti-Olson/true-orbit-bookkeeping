@@ -14,9 +14,11 @@ module.exports = {
           dark: "#B8860B",
         },
         luxury: {
-          black: "#0A0A0A",
-          dark: "#121212",
-          gray: "#1F1F1F",
+          black: "#050505",
+          dark: "#0A0A0A",
+          gray: "#161616",
+          purple: "#1E1B4B",
+          indigo: "#312E81",
         }
       },
     },

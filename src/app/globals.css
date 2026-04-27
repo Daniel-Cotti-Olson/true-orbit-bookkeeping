@@ -4,19 +4,15 @@
 
 :root {
   --foreground-rgb: 249, 249, 249;
-  --background-start-rgb: 10, 10, 10;
-  --background-end-rgb: 0, 0, 0;
+  --background-start-rgb: 5, 5, 5;
+  --background-end-rgb: 10, 10, 25;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #050505 50%);
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
 @layer utilities {
@@ -24,13 +20,25 @@ body {
     text-wrap: balance;
   }
   .gold-gradient {
-    background: linear-gradient(45deg, #B8860B, #D4AF37, #F3E5AB, #D4AF37, #B8860B);
+    background: linear-gradient(135deg, #B8860B 0%, #D4AF37 25%, #F3E5AB 50%, #D4AF37 75%, #B8860B 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
   }
   .gold-border {
     border: 1px solid transparent;
-    background: linear-gradient(#121212, #121212) padding-box,
-                linear-gradient(45deg, #B8860B, #D4AF37, #B8860B) border-box;
+    background: linear-gradient(#050505, #050505) padding-box,
+                linear-gradient(135deg, #B8860B, #D4AF37, #B8860B) border-box;
+  }
+  .luxury-card {
+    background: rgba(22, 22, 22, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(212, 175, 55, 0.1);
+  }
+  .bg-mesh {
+    background-image: 
+      radial-gradient(at 0% 0%, hsla(243, 75%, 15%, 1) 0, transparent 50%), 
+      radial-gradient(at 50% 0%, hsla(243, 75%, 10%, 1) 0, transparent 50%), 
+      radial-gradient(at 100% 0%, hsla(243, 75%, 15%, 1) 0, transparent 50%);
   }
 }

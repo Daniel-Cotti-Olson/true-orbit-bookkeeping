@@ -1,33 +1,54 @@
-# True Orbit Bookkeeping LLC
+# True Orbit Bookkeeping
 
-A high-end, responsive website built with Next.js and Tailwind CSS for True Orbit Bookkeeping.
+A luxury financial services website built with **Next.js 14**, **Tailwind CSS**, and **Framer Motion**.
 
-## Features
-- **Luxury Aesthetic**: Black and Gold theme inspired by the company logo.
-- **Dynamic Sections**: Hero, Services, Pricing, and Contact.
-- **Modern Tech Stack**: Next.js 14, Tailwind CSS, Framer Motion, and Lucide Icons.
+## 🚀 Getting Started
 
-## Getting Started
+First, install the dependencies:
 
-1. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-2. **Run the development server:**
-   ```bash
-   npm run dev
-   ```
+Then, run the development server:
 
-3. **Build for production:**
-   ```bash
-   npm run build
-   ```
+```bash
+npm run dev
+```
 
-## Services
-- Core Orbit ($299/mo)
-- Professional Clarity ($599/mo)
-- Elite Advisory ($1,200+/mo)
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Contact
-Email: info@trueorbitbookkeeing.com
+## 🎨 Design System
+
+- **Aesthetic**: High-end Luxury / Financial Elite.
+- **Colors**:
+  - Luxury Black: `#050505`
+  - True Gold: `#D4AF37`
+  - Midnight Purple: `#1E1B4B`
+  - Strategic Indigo: `#312E81`
+- **Typography**: Inter (Modern Sans-Serif)
+
+## 📁 Project Structure
+
+- `src/app`: Next.js App Router and global styles.
+- `src/components`: Reusable UI components (Navbar, Footer, Cards).
+- `public`: Static assets (Logo, etc.).
+
+## 🌐 Deployment
+
+This project is optimized for deployment on **Vercel** or **Netlify**.
+
+### Deploying to Vercel (Recommended)
+
+1. Push your code to a GitHub repository.
+2. Go to [Vercel](https://vercel.com) and click **"New Project"**.
+3. Import your repository.
+4. Vercel will automatically detect Next.js and deploy your site.
+
+### Deploying to GitHub Pages
+
+To deploy to GitHub Pages, you may need to update `next.config.mjs` for static exports.
+
+## 📝 License
+
+© 2026 True Orbit Bookkeeping LLC. All rights reserved.

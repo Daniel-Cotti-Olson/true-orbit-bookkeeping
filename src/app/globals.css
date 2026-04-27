@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 249, 249, 249;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  font-family: 'Inter', sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gold-gradient {
+    background: linear-gradient(45deg, #B8860B, #D4AF37, #F3E5AB, #D4AF37, #B8860B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .gold-border {
+    border: 1px solid transparent;
+    background: linear-gradient(#121212, #121212) padding-box,
+                linear-gradient(45deg, #B8860B, #D4AF37, #B8860B) border-box;
+  }
+}

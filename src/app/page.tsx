@@ -68,7 +68,7 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative pt-80 pb-32 px-8 overflow-hidden">
+      <section className="relative pt-24 pb-32 px-8 overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
         
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
@@ -148,10 +148,10 @@ export default function Home() {
             <div className="aspect-[4/5] rounded-[3rem] overflow-hidden gold-border p-2 shadow-2xl relative z-10">
               <div className="w-full h-full relative">
                 <Image 
-                  src="/daniel.jpg" 
+                  src="/daniel2.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
                   fill 
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="object-cover transition-all duration-700"
                 />
               </div>
             </div>

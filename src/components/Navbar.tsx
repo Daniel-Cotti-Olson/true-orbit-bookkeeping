@@ -18,17 +18,22 @@ const Navbar = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center w-full px-4 text-center"
         >
-          {/* Logo at the very top - Full Width as requested */}
-          <div className="w-full max-w-[1400px] mb-8">
+          {/* Logo at the very top */}
+          <div className="w-full max-w-[800px] mb-6">
             <Image 
               src="/logo-no-bg.svg" 
-              alt="True Orbit Bookkeeping" 
-              width={1400} 
-              height={400} 
-              className="w-full h-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+              alt="True Orbit Logo" 
+              width={800} 
+              height={200} 
+              className="w-full h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]"
               priority
             />
           </div>
+
+          {/* Company Name - Full Width */}
+          <h1 className="w-full text-[clamp(2rem,8vw,10rem)] font-black gold-gradient leading-[0.8] tracking-tighter uppercase mb-6">
+            True Orbit Bookkeeping
+          </h1>
 
           {/* Tagline - Elite Financial Management */}
           <div className="flex items-center gap-3 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-gold text-[clamp(0.7rem,2vw,1.2rem)] font-black tracking-[0.5em] uppercase shadow-2xl mb-8">

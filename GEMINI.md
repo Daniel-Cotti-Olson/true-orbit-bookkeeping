@@ -18,8 +18,8 @@ This directory serves as the primary workspace for **True Orbit Bookkeeping LLC*
 - **Elite Advisory ($1,200+/mo)**: Full financial controller and forecasting services.
 
 ## Project Status
-- **Branding**: Logo and company name layout updated in the header. Background color matched to the luxury indigo theme.
-- **Visuals**: Primary photo updated to `Daniel.jpg` (Color version).
+- **Branding**: Logo and company name layout redesigned for a high-end professional look. Logo is now larger with a custom background, and the company name spans the full width of the header. Tagline "Elite Financial Management" positioned at the bottom of the banner to ensure correct hierarchy.
+- **Visuals**: Primary photo removed from the website as part of the refined, typography-focused design update.
 - **Redundancy**: Removed duplicate company name and moved "Elite Financial Management" to the top banner.
 
 ## Roadmap

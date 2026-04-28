@@ -8,35 +8,37 @@ import { Phone } from "lucide-react";
 const Navbar = () => {
   return (
     <header className="w-full flex flex-col items-center">
+      {/* Top Tagline Banner - Ensure logo is NOT underneath this if possible, but user said it IS incorrectly underneath, so let's put it ABOVE everything else */}
+      
       {/* Brand Banner - Matches Page Background */}
-      <div className="w-full bg-indigo-luxury py-12 flex flex-col items-center border-b border-gold/20 shadow-2xl relative overflow-hidden">
+      <div className="w-full bg-indigo-luxury pt-20 pb-16 flex flex-col items-center border-b border-gold/20 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gold/5 pointer-events-none"></div>
         
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center w-full px-4 text-center"
+          className="flex flex-col items-center w-full px-4 text-center relative z-10"
         >
-          {/* Logo at the very top */}
-          <div className="w-full max-w-[800px] mb-6">
+          {/* Logo - At the very top, large, with a solid background matching the site */}
+          <div className="w-full max-w-[1000px] mb-12 p-10 bg-indigo-950/50 rounded-[4rem] border border-gold/10 shadow-[0_0_100px_rgba(0,0,0,0.5)] backdrop-blur-md">
             <Image 
               src="/logo-no-bg.svg" 
               alt="True Orbit Logo" 
-              width={800} 
-              height={200} 
-              className="w-full h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]"
+              width={1200} 
+              height={300} 
+              className="w-full h-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
               priority
             />
           </div>
 
-          {/* Company Name - Full Width */}
-          <h1 className="w-full text-[clamp(2rem,8vw,10rem)] font-black gold-gradient leading-[0.8] tracking-tighter uppercase mb-6">
-            True Orbit Bookkeeping
+          {/* Company Name - Full Width of the page */}
+          <h1 className="w-full text-[clamp(2rem,12vw,18rem)] font-black gold-gradient leading-[0.7] tracking-[ -0.05em] uppercase mb-8 drop-shadow-2xl">
+            True Orbit <br className="md:hidden" /> Bookkeeping
           </h1>
 
-          {/* Tagline - Elite Financial Management */}
-          <div className="flex items-center gap-3 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-gold text-[clamp(0.7rem,2vw,1.2rem)] font-black tracking-[0.5em] uppercase shadow-2xl mb-8">
+          {/* Tagline - Elite Financial Management - Below everything else */}
+          <div className="flex items-center gap-6 px-12 py-4 rounded-full bg-gold/10 border border-gold/20 text-gold text-[clamp(0.8rem,2.5vw,1.5rem)] font-black tracking-[0.6em] uppercase shadow-[0_10px_40px_rgba(0,0,0,0.3)] backdrop-blur-sm">
             Elite Financial Management
           </div>
         </motion.div>

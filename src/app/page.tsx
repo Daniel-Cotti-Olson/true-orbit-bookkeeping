@@ -128,51 +128,27 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <div className="aspect-[4/5] rounded-[3rem] overflow-hidden gold-border p-2 shadow-2xl relative z-10">
-              <div className="w-full h-full relative">
-                <Image 
-                  src="/daniel.jpg" 
-                  alt="Daniel - True Orbit Bookkeeping" 
-                  fill 
-                  className="object-cover transition-all duration-700"
-                />
-              </div>
-            </div>
-            {/* 100% Commitment box moved to be less obstructive */}
-            <div className="absolute -bottom-10 -left-10 bg-gold p-10 rounded-[2.5rem] border border-white/20 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-20">
-              <p className="text-6xl font-black text-indigo-950 mb-1 leading-none">100%</p>
-              <p className="text-sm font-black tracking-[0.2em] uppercase text-indigo-900/60">Committed</p>
-            </div>
-          </motion.div>
-          
-          <div className="relative z-10">
-            <h2 className="text-5xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter">
+        <div className="max-w-4xl mx-auto">
+          <div className="relative z-10 text-center">
+            <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
               Elevating Business <br />
               <span className="gold-gradient">Through Precision</span>
             </h2>
-            <p className="text-white/60 text-xl mb-12 leading-relaxed font-medium">
+            <p className="text-white/60 text-xl md:text-2xl mb-16 leading-relaxed font-medium mx-auto max-w-2xl">
               True Orbit Bookkeeping was founded on a simple principle: small businesses deserve big-firm financial expertise. We don't just record numbers; we interpret them.
             </p>
-            <div className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto">
               {[
                 { icon: Target, title: "Mission Driven", text: "Empowering owners to focus on their craft." },
                 { icon: ShieldCheck, title: "Uncompromising Integrity", text: "Your financial security is our top priority." },
               ].map((item, i) => (
-                <div key={i} className="flex gap-8 items-start group">
-                  <div className="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
-                    <item.icon size={28} className="text-gold group-hover:text-inherit" />
+                <div key={i} className="flex gap-6 items-start group p-6 rounded-[2rem] bg-white/5 border border-white/10">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
+                    <item.icon size={24} className="text-gold group-hover:text-inherit" />
                   </div>
                   <div>
                     <h4 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{item.title}</h4>
-                    <p className="text-white/40 text-lg">{item.text}</p>
+                    <p className="text-white/40 text-lg leading-tight">{item.text}</p>
                   </div>
                 </div>
               ))}

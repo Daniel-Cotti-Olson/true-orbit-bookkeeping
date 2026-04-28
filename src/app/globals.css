@@ -4,13 +4,14 @@
 
 :root {
   --foreground-rgb: 249, 249, 249;
-  --background-start-rgb: 5, 5, 5;
-  --background-end-rgb: 10, 10, 25;
+  --background-start-rgb: 30, 27, 75; /* #1e1b4b */
+  --background-end-rgb: 15, 12, 41;   /* Darker Indigo */
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #050505 50%);
+  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f0c29 100%);
+  background-attachment: fixed;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }
@@ -27,18 +28,15 @@ body {
   }
   .gold-border {
     border: 1px solid transparent;
-    background: linear-gradient(#050505, #050505) padding-box,
+    background: linear-gradient(#1e1b4b, #1e1b4b) padding-box,
                 linear-gradient(135deg, #B8860B, #D4AF37, #B8860B) border-box;
   }
   .luxury-card {
-    background: rgba(22, 22, 22, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(212, 175, 55, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
-  .bg-mesh {
-    background-image: 
-      radial-gradient(at 0% 0%, hsla(243, 75%, 15%, 1) 0, transparent 50%), 
-      radial-gradient(at 50% 0%, hsla(243, 75%, 10%, 1) 0, transparent 50%), 
-      radial-gradient(at 100% 0%, hsla(243, 75%, 15%, 1) 0, transparent 50%);
+  .bg-indigo-luxury {
+    background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f0c29 100%);
   }
 }

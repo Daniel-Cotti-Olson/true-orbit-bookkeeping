@@ -128,31 +128,58 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.02]">
-        <div className="max-w-4xl mx-auto">
-          <div className="relative z-10 text-center">
-            <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
-              Elevating Business <br />
-              <span className="gold-gradient">Through Precision</span>
-            </h2>
-            <p className="text-white/60 text-xl md:text-2xl mb-16 leading-relaxed font-medium mx-auto max-w-2xl">
-              True Orbit Bookkeeping was founded on a simple principle: small businesses deserve big-firm financial expertise. We don't just record numbers; we interpret them.
-            </p>
-            <div className="grid md:grid-cols-2 gap-12 text-left max-w-3xl mx-auto">
-              {[
-                { icon: Target, title: "Mission Driven", text: "Empowering owners to focus on their craft." },
-                { icon: ShieldCheck, title: "Uncompromising Integrity", text: "Your financial security is our top priority." },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-6 items-start group p-6 rounded-[2rem] bg-white/5 border border-white/10">
-                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
-                    <item.icon size={24} className="text-gold group-hover:text-inherit" />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <div className="relative z-10 rounded-[3rem] overflow-hidden border border-white/10 aspect-[4/5] shadow-2xl">
+                <Image 
+                  src="/Daniel2.jpg" 
+                  alt="Daniel - True Orbit Bookkeeping" 
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full"></div>
+              <div className="absolute -top-10 -left-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full"></div>
+            </motion.div>
+            
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative z-10"
+            >
+              <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
+                Elevating Business <br />
+                <span className="gold-gradient">Through Precision</span>
+              </h2>
+              <p className="text-white/60 text-xl md:text-2xl mb-16 leading-relaxed font-medium">
+                True Orbit Bookkeeping was founded on a simple principle: small businesses deserve big-firm financial expertise. We don't just record numbers; we interpret them.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-8 text-left">
+                {[
+                  { icon: Target, title: "Mission Driven", text: "Empowering owners to focus on their craft." },
+                  { icon: ShieldCheck, title: "Uncompromising Integrity", text: "Your financial security is our top priority." },
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-6 items-start group p-6 rounded-[2rem] bg-white/5 border border-white/10">
+                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
+                      <item.icon size={24} className="text-gold group-hover:text-inherit" />
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{item.title}</h4>
+                      <p className="text-white/40 text-lg leading-tight">{item.text}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{item.title}</h4>
-                    <p className="text-white/40 text-lg leading-tight">{item.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

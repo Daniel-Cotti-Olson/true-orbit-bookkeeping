@@ -8,22 +8,32 @@ import { Phone } from "lucide-react";
 const Navbar = () => {
   return (
     <header className="w-full flex flex-col items-center">
-      {/* Brand Banner - Solid Background */}
-      <div className="w-full bg-indigo-950 py-16 flex justify-center items-center border-b border-gold/20 shadow-2xl">
+      {/* Brand Banner - Matches Page Background */}
+      <div className="w-full bg-indigo-luxury py-12 flex flex-col items-center border-b border-gold/20 shadow-2xl relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-gold/5 pointer-events-none"></div>
+        
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full max-w-5xl px-8"
+          className="flex flex-col items-center w-full px-4 text-center"
         >
-          <Image 
-            src="/logo-no-bg.svg" 
-            alt="True Orbit Bookkeeping" 
-            width={1200} 
-            height={400} 
-            className="w-full h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.2)]" 
-            priority
-          />
+          {/* Logo at the very top - Full Width as requested */}
+          <div className="w-full max-w-[1400px] mb-8">
+            <Image 
+              src="/logo-no-bg.svg" 
+              alt="True Orbit Bookkeeping" 
+              width={1400} 
+              height={400} 
+              className="w-full h-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.3)]"
+              priority
+            />
+          </div>
+
+          {/* Tagline - Elite Financial Management */}
+          <div className="flex items-center gap-3 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-gold text-[clamp(0.7rem,2vw,1.2rem)] font-black tracking-[0.5em] uppercase shadow-2xl mb-8">
+            Elite Financial Management
+          </div>
         </motion.div>
       </div>
       

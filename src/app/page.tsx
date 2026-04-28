@@ -72,15 +72,6 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gold/5 blur-[150px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
         
         <div className="max-w-7xl mx-auto relative z-10 flex flex-col items-center text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/5 border border-white/10 text-gold text-xs font-black tracking-[0.3em] uppercase mb-12 shadow-2xl"
-          >
-            <Sparkles size={14} className="animate-pulse" /> Elite Financial Management
-          </motion.div>
-          
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -148,7 +139,7 @@ export default function Home() {
             <div className="aspect-[4/5] rounded-[3rem] overflow-hidden gold-border p-2 shadow-2xl relative z-10">
               <div className="w-full h-full relative">
                 <Image 
-                  src="/daniel2.jpg" 
+                  src="/daniel.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
                   fill 
                   className="object-cover transition-all duration-700"

@@ -139,7 +139,7 @@ export default function Home() {
             >
               <div className="relative z-10 rounded-[3rem] overflow-hidden border border-white/10 aspect-[4/5] shadow-2xl">
                 <Image 
-                  src="/Daniel2.jpg" 
+                  src="/Daniel4.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
                   fill
                   className="object-cover"

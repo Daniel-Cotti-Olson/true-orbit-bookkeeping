@@ -19,7 +19,7 @@ This directory serves as the primary workspace for **True Orbit Bookkeeping LLC*
 
 ## Project Status
 - **Branding**: Logo and company name layout redesigned for a high-end professional look. Logo is now larger with a custom background, and the company name spans the full width of the header. Tagline "Elite Financial Management" positioned at the bottom of the banner to ensure correct hierarchy.
-- **Visuals**: Primary photo removed from the website as part of the refined, typography-focused design update.
+- **Visuals**: Founder photo (Daniel4.jpg) restored to the About section, resized by 60% for a cleaner, high-end professional look.
 - **Redundancy**: Removed duplicate company name and moved "Elite Financial Management" to the top banner.
 
 ## Roadmap
@@ -27,3 +27,24 @@ This directory serves as the primary workspace for **True Orbit Bookkeeping LLC*
 2. **Website Implementation**: Core layout and sections (Hero, Services, About, Pricing, Contact) implemented.
 3. **Refinement**: UI/UX adjustments based on owner feedback (Logo placement, sizing, photo updates).
 4. **Deployment**: Host the project via the owner's GitHub account.
+
+## Maintenance & Procedures
+
+### Resizing Images (e.g., Daniel4.jpg)
+To reduce image size by 60% (leaving 40% of original dimensions) and maintain performance:
+1. **Code Adjustment**: In `src/app/page.tsx`, wrap the `Image` component in a container with defined Tailwind dimensions (e.g., `w-24 h-32` for a 60% reduction from a `w-64` baseline).
+2. **File Optimization**: Use ImageMagick to resize the physical file:
+   ```bash
+   convert public/Daniel4.jpg -resize 40% public/Daniel4.jpg
+   ```
+3. **Deployment**: Commit and push changes to GitHub to trigger the Vercel auto-deployment:
+   ```bash
+   git add .
+   git commit -m "style: resize image and update layout"
+   git push origin main
+   ```
+
+### Critical Steps for Activation
+- Ensure all changes are committed to the `main` branch.
+- Push to `origin main` to sync with GitHub.
+- Vercel is configured to watch the `main` branch and will deploy automatically upon push.

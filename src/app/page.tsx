@@ -128,16 +128,18 @@ export default function Home() {
 
       {/* About Section */}
       <section id="about" className="w-full py-40 px-8 relative overflow-hidden bg-white/[0.02]">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <motion.div 
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <div className="relative z-10 rounded-[3rem] overflow-hidden border border-white/10 aspect-[4/5] shadow-2xl">
+        <div className="max-w-7xl mx-auto flex flex-col items-center text-center">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="relative mb-20"
+          >
+            {/* Footprint container to maintain bottom position and center the reduced image */}
+            <div className="w-64 h-80 md:w-72 md:h-96 mx-auto flex items-end justify-center relative z-10">
+              {/* Reduced Image container (approx 40% size) */}
+              <div className="relative rounded-2xl overflow-hidden border-2 border-gold/30 w-24 h-32 md:w-28 md:h-40 shadow-2xl">
                 <Image 
                   src="/Daniel4.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
@@ -145,42 +147,44 @@ export default function Home() {
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full"></div>
-              <div className="absolute -top-10 -left-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full"></div>
-            </motion.div>
+            </div>
+            {/* Adjusted decorative circles to follow the smaller image */}
+            <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-40 h-40 bg-gold/20 blur-[60px] rounded-full"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-indigo-500/10 blur-[60px] rounded-full"></div>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl"
+          >
+            <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
+              Elevating Business <br />
+              <span className="gold-gradient">Through Precision</span>
+            </h2>
+            <p className="text-white/60 text-xl md:text-2xl mb-16 leading-relaxed font-medium">
+              True Orbit Bookkeeping was founded on a simple principle: small businesses deserve big-firm financial expertise. We don't just record numbers; we interpret them.
+            </p>
             
-            <motion.div 
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative z-10"
-            >
-              <h2 className="text-5xl md:text-8xl font-black mb-10 leading-[0.9] tracking-tighter uppercase">
-                Elevating Business <br />
-                <span className="gold-gradient">Through Precision</span>
-              </h2>
-              <p className="text-white/60 text-xl md:text-2xl mb-16 leading-relaxed font-medium">
-                True Orbit Bookkeeping was founded on a simple principle: small businesses deserve big-firm financial expertise. We don't just record numbers; we interpret them.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-8 text-left">
-                {[
-                  { icon: Target, title: "Mission Driven", text: "Empowering owners to focus on their craft." },
-                  { icon: ShieldCheck, title: "Uncompromising Integrity", text: "Your financial security is our top priority." },
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-6 items-start group p-6 rounded-[2rem] bg-white/5 border border-white/10">
-                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
-                      <item.icon size={24} className="text-gold group-hover:text-inherit" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{item.title}</h4>
-                      <p className="text-white/40 text-lg leading-tight">{item.text}</p>
-                    </div>
+            <div className="grid sm:grid-cols-2 gap-8 text-left max-w-3xl mx-auto">
+              {[
+                { icon: Target, title: "Mission Driven", text: "Empowering owners to focus on their craft." },
+                { icon: ShieldCheck, title: "Uncompromising Integrity", text: "Your financial security is our top priority." },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6 items-start group p-6 rounded-[2rem] bg-white/5 border border-white/10">
+                  <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500">
+                    <item.icon size={24} className="text-gold group-hover:text-inherit" />
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
+                  <div>
+                    <h4 className="text-xl font-black text-white mb-2 uppercase tracking-tight">{item.title}</h4>
+                    <p className="text-white/40 text-lg leading-tight">{item.text}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </div>
       </section>
 

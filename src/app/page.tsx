@@ -140,7 +140,7 @@ export default function Home() {
               {/* Image container reduced to approx 40% of previous large size */}
               <div className="relative z-30 rounded-[2rem] overflow-hidden border border-white/10 w-64 h-80 md:w-72 md:h-96 shadow-2xl bg-white/5">
                 <Image 
-                  src="/Daniel4.jpg" 
+                  src="/Daniel-Founder.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
                   fill
                   sizes="(max-width: 768px) 256px, 288px"

@@ -7,40 +7,38 @@ import { Phone } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <header className="w-full flex flex-col items-center">
-      {/* Top Tagline Banner - Ensure logo is NOT underneath this if possible, but user said it IS incorrectly underneath, so let's put it ABOVE everything else */}
-      
-      {/* Brand Banner - Matches Page Background */}
-      <div className="w-full bg-indigo-luxury pt-20 pb-16 flex flex-col items-center border-b border-gold/20 shadow-2xl relative overflow-hidden">
+    <header className="w-full flex flex-col items-center sticky top-0 z-50">
+      {/* Brand Banner - Solid Horizontal Bar, Sticky */}
+      <div className="w-full bg-indigo-luxury flex flex-col items-center border-b border-gold/20 shadow-2xl relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gold/5 pointer-events-none"></div>
         
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex flex-col items-center w-full px-4 text-center relative z-10"
+          className="flex flex-col items-center w-full px-4 text-center relative z-10 py-6"
         >
-          {/* Logo - At the very top, large, with a solid background matching the site */}
-          <div className="w-full max-w-[1000px] mb-12 p-10 bg-indigo-950/50 rounded-[4rem] border border-gold/10 shadow-[0_0_100px_rgba(0,0,0,0.5)] backdrop-blur-md">
+          {/* Logo - Standardized within the horizontal bar */}
+          <div className="w-full max-w-[800px] mb-4">
             <Image 
               src="/logo-no-bg.svg" 
               alt="True Orbit Logo" 
               width={1200} 
-              height={300} 
-              className="w-full h-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
+              height={200} 
+              className="w-full h-auto drop-shadow-[0_0_20px_rgba(212,175,55,0.3)]"
               priority
             />
           </div>
 
-          {/* Tagline - Elite Financial Management - Below everything else */}
-          <div className="flex items-center gap-6 px-12 py-4 rounded-full bg-gold/10 border border-gold/20 text-gold text-[clamp(0.8rem,2.5vw,1.5rem)] font-black tracking-[0.6em] uppercase shadow-[0_10px_40px_rgba(0,0,0,0.3)] backdrop-blur-sm">
+          {/* Tagline - Compact for sticky bar */}
+          <div className="text-gold text-[clamp(0.6rem,1.5vw,0.9rem)] font-black tracking-[0.4em] uppercase opacity-80">
             Elite Financial Management
           </div>
         </motion.div>
       </div>
       
-      {/* Navigation Bar - Sticky for usability */}
-      <nav className="w-full py-6 px-8 flex flex-wrap justify-center items-center gap-8 md:gap-16 text-sm font-bold tracking-widest uppercase bg-indigo-900/60 backdrop-blur-2xl border-b border-white/5 sticky top-0 z-50 shadow-lg">
+      {/* Navigation Bar - Integrated into the sticky header structure */}
+      <nav className="w-full py-4 px-8 flex flex-wrap justify-center items-center gap-8 md:gap-16 text-xs font-bold tracking-widest uppercase bg-indigo-950/90 backdrop-blur-xl border-b border-white/5 shadow-lg">
         {["Services", "Pricing", "About", "Contact"].map((item) => (
           <Link 
             key={item} 

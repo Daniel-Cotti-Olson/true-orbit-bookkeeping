@@ -131,23 +131,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-20 items-center">
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
+              initial={{ opacity: 0.1, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative flex justify-center lg:justify-end"
+              className="relative flex justify-center lg:justify-end z-20"
             >
               {/* Image container reduced to approx 40% of previous large size */}
-              <div className="relative z-10 rounded-[2rem] overflow-hidden border border-white/10 w-64 h-80 md:w-72 md:h-96 shadow-2xl">
+              <div className="relative z-30 rounded-[2rem] overflow-hidden border border-white/10 w-64 h-80 md:w-72 md:h-96 shadow-2xl bg-white/5">
                 <Image 
                   src="/Daniel4.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
                   fill
+                  sizes="(max-width: 768px) 256px, 288px"
+                  priority
                   className="object-cover"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full"></div>
-              <div className="absolute -top-10 -left-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full"></div>
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full z-10"></div>
+              <div className="absolute -top-10 -left-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full z-10"></div>
             </motion.div>
             
             <motion.div 

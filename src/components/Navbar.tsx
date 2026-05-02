@@ -7,38 +7,38 @@ import { Phone } from "lucide-react";
 
 const Navbar = () => {
   return (
-    <header className="w-full flex flex-col items-center sticky top-0 z-50 bg-indigo-luxury border-b border-gold/20 shadow-2xl">
+    <header className="w-full flex flex-col items-center sticky top-0 z-50 bg-indigo-luxury border-b border-gold/20 shadow-2xl overflow-visible">
       {/* Brand Banner - Solid Horizontal Bar */}
       <div className="w-full flex flex-col items-center relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-gold/5 pointer-events-none"></div>
         
-        <div className="flex flex-col items-center w-full px-4 text-center relative z-10 py-4">
-          {/* Logo Container - Reduced height and simplified to prevent glitches */}
-          <div className="w-full max-w-[600px] transition-all duration-300">
+        <div className="flex flex-col items-center w-full px-4 text-center relative z-10 py-3">
+          {/* Logo Container - Reduced height (20% reduction) */}
+          <div className="w-full max-w-[500px] transition-all duration-300">
             <Image 
               src="/logo-compact.svg" 
               alt="True Orbit Logo" 
               width={1000} 
-              height={150} 
+              height={120} 
               className="w-full h-auto drop-shadow-[0_0_15px_rgba(212,175,55,0.3)]"
               priority
             />
           </div>
 
           {/* Tagline - Compact for sticky bar */}
-          <div className="text-gold text-[clamp(0.6rem,1.5vw,0.8rem)] font-black tracking-[0.4em] uppercase opacity-70 mt-1">
+          <div className="text-gold text-[clamp(0.7rem,1.8vw,1rem)] font-black tracking-[0.4em] uppercase opacity-75 mt-0.5">
             Elite Financial Management
           </div>
         </div>
       </div>
       
-      {/* Navigation Bar - Integrated into the sticky header structure */}
-      <nav className="w-full py-3 px-8 flex flex-wrap justify-center items-center gap-6 md:gap-12 text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase bg-indigo-950/40 backdrop-blur-md border-t border-white/5">
+      {/* Navigation Bar - Full Width with increased text size */}
+      <nav className="w-full py-3 px-8 flex flex-wrap justify-center items-center gap-8 md:gap-16 text-sm md:text-base font-bold tracking-[0.2em] uppercase bg-indigo-950/40 backdrop-blur-md border-t border-white/5">
         {["Services", "Pricing", "About", "Contact"].map((item) => (
           <Link 
             key={item} 
             href={`#${item.toLowerCase()}`} 
-            className="text-white/60 hover:text-gold transition-colors duration-300 relative group"
+            className="text-white/70 hover:text-gold transition-colors duration-300 relative group"
           >
             {item}
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
@@ -48,7 +48,7 @@ const Navbar = () => {
           href="tel:5033139953" 
           className="flex items-center gap-3 text-gold hover:text-gold-light transition-all bg-gold/10 px-6 py-2.5 rounded-full border border-gold/30 hover:shadow-[0_0_15px_rgba(212,175,55,0.2)]"
         >
-          <Phone size={14} />
+          <Phone size={16} />
           (503) 313-9953
         </a>
       </nav>

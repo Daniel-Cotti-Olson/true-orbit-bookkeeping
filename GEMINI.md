@@ -18,9 +18,9 @@ This directory serves as the primary workspace for **True Orbit Bookkeeping LLC*
 - **Elite Advisory ($1,200+/mo)**: Full financial controller and forecasting services.
 
 ## Project Status
-- **Branding**: Logo and company name layout redesigned for a high-end professional look. Logo is now larger with a custom background, and the company name spans the full width of the header. Tagline "Elite Financial Management" positioned at the bottom of the banner to ensure correct hierarchy.
-- **Visuals**: Founder photo (Daniel4.jpg) restored to the About section, resized by 60% for a cleaner, high-end professional look.
-- **Redundancy**: Removed duplicate company name and moved "Elite Financial Management" to the top banner.
+- **Branding**: Redundant company name text removed from the header to clean up the UI; the primary logo now stands alone as the lead visual. Tagline "Elite Financial Management" remains positioned at the bottom of the banner for a clean hierarchy.
+- **Visuals**: Founder photo (Daniel4.jpg) restored using a **Strict Framing** strategy (max 400px container) to prevent it from spanning the full width of the page while maintaining high resolution.
+- **Redundancy**: Eliminated duplicate text underneath the logo.
 
 ## Roadmap
 1. **Design System**: Established Tailwind CSS configuration based on the logo's color palette (Black, Gold, Luxury Indigo).
@@ -30,19 +30,16 @@ This directory serves as the primary workspace for **True Orbit Bookkeeping LLC*
 
 ## Maintenance & Procedures
 
-### Resizing Images (e.g., Daniel4.jpg)
-To reduce image size by 60% (leaving 40% of original dimensions) and maintain performance:
-1. **Code Adjustment**: In `src/app/page.tsx`, wrap the `Image` component in a container with defined Tailwind dimensions (e.g., `w-24 h-32` for a 60% reduction from a `w-64` baseline).
-2. **File Optimization**: Use ImageMagick to resize the physical file:
-   ```bash
-   convert public/Daniel4.jpg -resize 40% public/Daniel4.jpg
+### Image Handling: Strict Framing
+To control the size of a photo (like `Daniel4.jpg`) without degrading its quality through file-level resizing:
+1. **Container-First Approach**: Wrap the Next.js `Image` in a `div` with a defined `max-width` (e.g., `max-w-[400px]`) and an `aspect-ratio` (e.g., `aspect-[4/5]`).
+2. **Implementation**:
+   ```tsx
+   <div className="relative w-full max-w-[400px] aspect-[4/5]">
+     <Image src="/Daniel4.jpg" fill className="object-cover" priority />
+   </div>
    ```
-3. **Deployment**: Commit and push changes to GitHub to trigger the Vercel auto-deployment:
-   ```bash
-   git add .
-   git commit -m "style: resize image and update layout"
-   git push origin main
-   ```
+3. **Benefit**: This keeps the image sharp and high-resolution while ensuring it never expands to fill the entire horizontal space of the page.
 
 ### Critical Steps for Activation
 - Ensure all changes are committed to the `main` branch.

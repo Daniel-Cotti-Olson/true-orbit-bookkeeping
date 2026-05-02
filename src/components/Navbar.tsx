@@ -32,11 +32,6 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Company Name - Full Width of the page */}
-          <h1 className="w-full text-[clamp(2rem,12vw,18rem)] font-black gold-gradient leading-[0.7] tracking-[ -0.05em] uppercase mb-8 drop-shadow-2xl">
-            True Orbit <br className="md:hidden" /> Bookkeeping
-          </h1>
-
           {/* Tagline - Elite Financial Management - Below everything else */}
           <div className="flex items-center gap-6 px-12 py-4 rounded-full bg-gold/10 border border-gold/20 text-gold text-[clamp(0.8rem,2.5vw,1.5rem)] font-black tracking-[0.6em] uppercase shadow-[0_10px_40px_rgba(0,0,0,0.3)] backdrop-blur-sm">
             Elite Financial Management

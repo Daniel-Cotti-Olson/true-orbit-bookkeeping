@@ -64,8 +64,9 @@ const plans = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-indigo-luxury text-white selection:bg-gold selection:text-indigo-950">
+    <>
       <Navbar />
+      <main className="min-h-screen bg-indigo-luxury text-white selection:bg-gold selection:text-indigo-950">
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 px-8 overflow-hidden">
@@ -278,6 +279,7 @@ export default function Home() {
       </section>
 
       <Footer />
-    </main>
+      </main>
+    </>
   );
 }

@@ -11,7 +11,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #0f0c29 100%);
-  background-attachment: fixed;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
 }

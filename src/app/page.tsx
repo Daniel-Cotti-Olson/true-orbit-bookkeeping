@@ -66,7 +66,37 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-indigo-luxury text-white selection:bg-gold selection:text-indigo-950">
+      <main className="min-h-screen bg-indigo-luxury text-white selection:bg-gold selection:text-indigo-950" style={{paddingTop: "60px"}}>
+
+        {/* Logo Banner */}
+        <div style={{
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          backgroundColor: "#1e1b4b",
+          borderBottom: "1px solid rgba(212,175,55,0.2)",
+          paddingBottom: "1.5rem",
+        }}>
+          <img
+            src="/logo-no-bg.svg"
+            alt="True Orbit Logo"
+            style={{width: "100%", maxWidth: "700px", padding: "1.5rem"}}
+          />
+          <div style={{
+            color: "#D4AF37",
+            fontSize: "clamp(0.6rem, 2vw, 1rem)",
+            fontWeight: 900,
+            letterSpacing: "0.4em",
+            textTransform: "uppercase",
+            padding: "0.5rem 2rem",
+            border: "1px solid rgba(212,175,55,0.2)",
+            borderRadius: "9999px",
+            backgroundColor: "rgba(212,175,55,0.1)",
+          }}>
+            Elite Financial Management
+          </div>
+        </div>
 
       {/* Hero Section */}
       <section className="relative pt-24 pb-32 px-8 overflow-hidden">

@@ -63,6 +63,19 @@ const plans = [
 ];
 
 export default function Home() {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    await fetch("https://formspree.io/f/xaqvewng", {
+      method: "POST",
+      body: data,
+      headers: { Accept: "application/json" },
+    });
+    alert("Message sent! We'll be in touch soon.");
+    form.reset();
+  };
+
   return (
     <>
       <Navbar />

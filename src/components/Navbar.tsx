@@ -14,14 +14,14 @@ const Navbar = () => {
       {/* Brand Banner */}
       <div className="w-full flex flex-col items-center border-b border-yellow-500/20">
 
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center w-full px-4 text-center"
-        >
-          {/* Logo */}
-          <div className="w-full max-w-[1000px] mb-8 p-6 mt-6">
+        <div className="flex flex-col items-center w-full px-4 text-center">
+          {/* Logo - animation kept but only on opacity, not position */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="w-full max-w-[1000px] mb-8 p-6 mt-6"
+          >
             <Image
               src="/logo-no-bg.svg"
               alt="True Orbit Logo"
@@ -30,13 +30,18 @@ const Navbar = () => {
               className="w-full h-auto drop-shadow-[0_0_30px_rgba(212,175,55,0.4)]"
               priority
             />
-          </div>
+          </motion.div>
 
           {/* Tagline */}
-          <div className="flex items-center gap-6 px-10 py-3 mb-6 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-[clamp(0.7rem,2vw,1.2rem)] font-black tracking-[0.5em] uppercase shadow-lg">
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex items-center gap-6 px-10 py-3 mb-6 rounded-full bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-[clamp(0.7rem,2vw,1.2rem)] font-black tracking-[0.5em] uppercase shadow-lg"
+          >
             Elite Financial Management
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Navigation Bar */}

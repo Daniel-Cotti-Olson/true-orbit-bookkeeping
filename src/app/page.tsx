@@ -137,6 +137,9 @@ export default function Home() {
             High-end bookkeeping and strategic financial advisory designed specifically for ambitious small businesses and solopreneurs who demand excellence.
           </motion.p>
           
+        </div>
+      </section>
+          
           
             
           

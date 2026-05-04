@@ -97,7 +97,7 @@ export default function Home() {
             src="/logo-no-bg.svg"
             alt="True Orbit Logo"
             style={{width: "100%", maxWidth: "700px", padding: "1.5rem"}}
-          />
+            />
           <div style={{
             color: "#D4AF37",
             fontSize: "clamp(0.6rem, 2vw, 1rem)",
@@ -184,15 +184,21 @@ export default function Home() {
               className="relative flex justify-center lg:justify-end z-20"
             >
               {/* Strictly sized frame to contain the image */}
-              <div className="relative z-30 rounded-[2rem] overflow-hidden border border-white/10 w-full max-w-[400px] aspect-[4/5] shadow-2xl bg-white/5">
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1 }}
+                className="relative z-30 rounded-[2rem] overflow-hidden border border-white/10 w-full max-w-[400px] aspect-[4/5] shadow-2xl bg-white/5"
+                >
                 <Image 
                   src="/Daniel4.jpg" 
                   alt="Daniel - True Orbit Bookkeeping" 
                   fill
                   priority
                   className="object-cover"
-                />
-              </div>
+                  />
+              </motion.div>
               <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-gold/20 blur-[100px] rounded-full z-10"></div>
               <div className="absolute -top-10 -left-10 w-64 h-64 bg-indigo-500/10 blur-[100px] rounded-full z-10"></div>
             </motion.div>

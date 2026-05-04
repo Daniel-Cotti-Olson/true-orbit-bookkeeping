@@ -139,9 +139,7 @@ export default function Home() {
           
           
             
-          </motion.div>
-        </div>
-      </section>
+          
 
       {/* Services Section */}
       <section id="services" className="w-full py-40 px-8 relative">

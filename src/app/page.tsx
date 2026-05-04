@@ -10,6 +10,7 @@ import {
   Sparkles,
   Target
 } from "lucide-react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
@@ -63,7 +64,7 @@ const plans = [
 ];
 
 export default function Home() {
-  const [submitted, setSubmitted] = React.useState(false);
+  const [submitted, setSubmitted] = useState(false);
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;

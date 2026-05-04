@@ -327,3 +327,11 @@ export default function Home() {
     </motion.button>
   </motion.form>
 )}
+        </div>
+      </section>
+
+      <Footer />
+      </main>
+    </>
+  );
+}

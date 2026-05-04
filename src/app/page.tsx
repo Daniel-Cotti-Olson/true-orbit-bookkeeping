@@ -282,11 +282,12 @@ export default function Home() {
           </div>
           
           <motion.form 
-  onSubmit={handleSubmit}
   initial={{ opacity: 0, y: 30 }}
   whileInView={{ opacity: 1, y: 0 }}
   viewport={{ once: true }}
   className="bg-white/[0.03] backdrop-blur-3xl p-12 md:p-16 rounded-[4rem] border border-white/10 space-y-10 shadow-[0_30px_100px_rgba(0,0,0,0.4)]"
+  action="https://formspree.io/f/xaqvewng"
+  method="POST"
 >
   <div className="grid md:grid-cols-2 gap-10">
     <div className="space-y-4">

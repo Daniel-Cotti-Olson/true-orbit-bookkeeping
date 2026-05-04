@@ -143,18 +143,7 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="flex flex-col sm:flex-row gap-6 justify-center"
           >
-            <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="bg-gold text-indigo-950 px-12 py-6 rounded-2xl font-black text-xl hover:bg-gold-light hover:shadow-[0_0_50px_rgba(212,175,55,0.4)] transition-all flex items-center gap-3"
-              >
-              Book a Strategy Call <ArrowRight size={24} />
-            </button>
-            <button 
-              onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="gold-border px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white/5 transition-all"
-              >
-              Explore Services
-            </button>
+            
           </motion.div>
         </div>
       </section>

@@ -289,6 +289,7 @@ export default function Home() {
   action="https://formspree.io/f/xaqvewng"
   method="POST"
 >
+            <input type="hidden" name="_next" value="https://www.trueorbitbookkeeping.com" />
   <div className="grid md:grid-cols-2 gap-10">
     <div className="space-y-4">
       <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">First Name</label>

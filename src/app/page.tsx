@@ -67,13 +67,17 @@ export default function Home() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    await fetch("https://formspree.io/f/xaqvewng", {
+    const response = await fetch("https://formspree.io/f/xaqvewng", {
       method: "POST",
       body: data,
       headers: { Accept: "application/json" },
     });
-    alert("Message sent! We'll be in touch soon.");
-    form.reset();
+    if (response.ok) {
+      alert("Message sent! We'll be in touch soon.");
+      form.reset();
+    } else {
+      alert("Something went wrong. Please try again or call us directly.");
+    }
   };
 
   return (

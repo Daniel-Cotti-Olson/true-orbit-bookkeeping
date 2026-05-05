@@ -65,7 +65,7 @@ const plans = [
 
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
-  const formRef = React.useRef<HTMLFormElement>(null);
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -80,7 +80,6 @@ export default function Home() {
       alert("Something went wrong. Please call us directly at (503) 313-9953.");
     }
   };
-
   return (
     <>
       <Navbar />

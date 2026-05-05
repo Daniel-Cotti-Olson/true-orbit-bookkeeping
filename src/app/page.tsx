@@ -275,9 +275,9 @@ export default function Home() {
     className="flex items-start gap-4 w-fit"
   >
     <div style={{
-      width: "3.5rem",
-      height: "3.5rem",
-      borderRadius: "1rem",
+    width: "2.5rem",
+    height: "2.5rem",
+    borderRadius: "0.75rem",
       backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
       border: "1px solid rgba(255,255,255,0.1)",
       display: "flex",

@@ -272,7 +272,7 @@ export default function Home() {
     onMouseEnter={() => setHoveredContact(i)}
     onMouseLeave={() => setHoveredContact(null)}
     onTouchEnd={() => setHoveredContact(null)}
-    className="flex items-start gap-4 w-fit"
+    className="flex items-start gap-4 w-full"
   >
     <div style={{
     width: "2.5rem",

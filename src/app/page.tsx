@@ -270,22 +270,22 @@ export default function Home() {
     key={i}
     onMouseEnter={() => setHoveredContact(i)}
     onMouseLeave={() => setHoveredContact(null)}
-    className="flex items-start gap-8 w-fit"
+    className="flex items-start gap-4 w-fit"
   >
     <div style={{
-  width: "3.5rem",
-  height: "3.5rem",
-  borderRadius: "1rem",
-  backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
-  border: "1px solid rgba(255,255,255,0.1)",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
-  transition: "all 0.5s",
-  flexShrink: 0,
-  marginTop: "0.25rem",
-  boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
+      width: "3.5rem",
+      height: "3.5rem",
+      borderRadius: "1rem",
+      backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
+      border: "1px solid rgba(255,255,255,0.1)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
+      transition: "all 0.5s",
+      flexShrink: 0,
+      marginTop: "0.25rem",
+      boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
     }}>
       <item.icon size={22} />
     </div>
@@ -300,7 +300,20 @@ export default function Home() {
       }}>
         {item.label}
       </p>
-      
+      <a
+        href={item.href}
+        onClick={(e) => {
+          e.preventDefault();
+          window.open(item.href, "_self");
+        }}
+        className="contact-link"
+        style={{
+          fontSize: "1.5rem",
+          fontWeight: 900,
+          transition: "color 0.3s",
+          textDecoration: "none",
+        }}
+      >
         {item.value}
       </a>
     </div>

@@ -80,10 +80,6 @@ export default function Home() {
       alert("Something went wrong. Please call us directly at (503) 313-9953.");
     }
   };
-    if (response.ok) {
-      setSubmitted(true);
-    }
-  };
 
   return (
     <>

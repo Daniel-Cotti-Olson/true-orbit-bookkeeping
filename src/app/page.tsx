@@ -265,7 +265,7 @@ export default function Home() {
                 { icon: Mail, label: "Email Us", value: "info@trueorbitbookkeeing.com", href: "mailto:info@trueorbitbookkeeing.com" },
                 { icon: Phone, label: "Call Us", value: "(503) 313-9953", href: "tel:5033139953" },
               ].map((item, i) => (
-                <a key={i} href={item.href} className="flex items-center gap-8 group w-fit">
+                <a key={i} href={item.href} className="flex items-center gap-8 group w-fit text-white no-underline">
                   <div className="w-20 h-20 rounded-[1.5rem] bg-white/5 border border-white/10 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-indigo-950 transition-all duration-500 shadow-xl">
                     <item.icon size={32} />
                   </div>

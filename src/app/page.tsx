@@ -272,19 +272,18 @@ export default function Home() {
     onMouseEnter={() => setHoveredContact(i)}
     onMouseLeave={() => setHoveredContact(null)}
     onTouchEnd={() => setHoveredContact(null)}
-    onClick={() => setClickedContact(i)}
     className="flex items-start gap-4 w-fit"
   >
     <div style={{
       width: "3.5rem",
       height: "3.5rem",
       borderRadius: "1rem",
-      backgroundColor: clickedContact === i ? "rgba(255,255,255,0.05)" : hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
+      backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
       border: "1px solid rgba(255,255,255,0.1)",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: clickedContact === i ? "#ffffff" : hoveredContact === i ? "#1e1b4b" : "#ffffff",
+      color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
       transition: "all 0.5s",
       flexShrink: 0,
       marginTop: "0.25rem",
@@ -307,14 +306,15 @@ export default function Home() {
         href={item.href}
         onClick={(e) => {
           e.preventDefault();
+          setClickedContact(i);
           window.open(item.href, "_self");
         }}
-        className="contact-link"
         style={{
           fontSize: "1.5rem",
           fontWeight: 900,
-          transition: "color 0.3s",
           textDecoration: "none",
+          transition: "color 0.3s",
+          color: clickedContact === i ? "#9A7B2A" : hoveredContact === i ? "#F3E5AB" : "#D4AF37",
         }}
       >
         {item.value}

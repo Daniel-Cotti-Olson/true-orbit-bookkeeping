@@ -22,7 +22,7 @@ export async function POST(request: Request) {
 
   await transporter.sendMail({
     from: process.env.SMTP_USER,
-    to: "info@trueorbitbookkeeing.com",
+    to: "info@trueorbitbookkeeping.com",
     subject: `New Inquiry - ${service}`,
     html: `
       <h2>New Contact Form Submission</h2>

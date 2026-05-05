@@ -310,12 +310,12 @@ export default function Home() {
           window.open(item.href, "_self");
         }}
         style={{
-          fontSize: "1.5rem",
-          fontWeight: 900,
-          textDecoration: "none",
-          transition: "color 0.3s",
-          color: clickedContact.has(i) ? "#9A7B2A" : hoveredContact === i ? "#F3E5AB" : "#D4AF37",
-        }}
+  fontSize: "1.5rem",
+  fontWeight: 900,
+  textDecoration: clickedContact.has(i) ? "none" : "underline",
+  transition: "color 0.3s",
+  color: clickedContact.has(i) ? "#9A7B2A" : hoveredContact === i ? "#F3E5AB" : "#F0C040",
+}}
       >
         {item.value}
       </a>

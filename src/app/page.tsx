@@ -69,11 +69,17 @@ export default function Home() {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
-    const response = await fetch("https://formspree.io/f/xaqvewng", {
+    const response = await fetch("/api/contact", {
       method: "POST",
       body: data,
-      headers: { Accept: "application/json" },
     });
+    const result = await response.json();
+    if (result.success) {
+      setSubmitted(true);
+    } else {
+      alert("Something went wrong. Please call us directly at (503) 313-9953.");
+    }
+  };
     if (response.ok) {
       setSubmitted(true);
     }

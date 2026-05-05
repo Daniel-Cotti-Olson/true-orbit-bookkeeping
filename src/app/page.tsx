@@ -266,52 +266,54 @@ export default function Home() {
               
               <div className="space-y-10">
     {contactItems.map((item, i) => (
-      <div
-        key={i}
-        onClick={() => { window.location.href = item.href; }}
-        style={{ textDecoration: "none", display: "block", cursor: "pointer" }}
-        onMouseEnter={() => setHoveredContact(i)}
-        onMouseLeave={() => setHoveredContact(null)}
-        className="flex items-start gap-8 w-fit"
-        >
-        <div style={{
-          width: "5rem",
-          height: "5rem",
-          borderRadius: "1.5rem",
-          backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
-          border: "1px solid rgba(255,255,255,0.1)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
-          transition: "all 0.5s",
-          flexShrink: 0,
-          boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)", 
-        }}>
-          <item.icon size={32} />
-        </div>
-        <div>
-          <p style={{
-          fontSize: "0.75rem",
-          fontWeight: 900,
-          letterSpacing: "0.3em",
-          textTransform: "uppercase",
-          color: "rgba(255,255,255,0.6)",
+  <div
+    key={i}
+    onMouseEnter={() => setHoveredContact(i)}
+    onMouseLeave={() => setHoveredContact(null)}
+    className="flex items-start gap-8 w-fit"
+  >
+    <div style={{
+      width: "5rem",
+      height: "5rem",
+      borderRadius: "1.5rem",
+      backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
+      border: "1px solid rgba(255,255,255,0.1)",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
+      transition: "all 0.5s",
+      flexShrink: 0,
+      boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
+    }}>
+      <item.icon size={32} />
+    </div>
+    <div>
+      <p style={{
+        fontSize: "0.75rem",
+        fontWeight: 900,
+        letterSpacing: "0.3em",
+        textTransform: "uppercase",
+        color: "rgba(255,255,255,0.6)",
         marginBottom: "0.5rem",
-        }}>
-            {item.label}
-          </p>
-          <p style={{
+      }}>
+        {item.label}
+      </p>
+      <a
+        href={item.href}
+        style={{
           fontSize: "1.5rem",
           fontWeight: 900,
           color: hoveredContact === i ? "#F3E5AB" : "#D4AF37",
           transition: "color 0.3s",
-        }}>
-            {item.value}
-          </p>
-        </div>
-      </div>
-  ))}
+          textDecoration: "none",
+        }}
+      >
+        {item.value}
+      </a>
+    </div>
+  </div>
+))}
               </div>
             </div>
             

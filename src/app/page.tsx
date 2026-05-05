@@ -329,6 +329,7 @@ export default function Home() {
 >
   Send Message
 </motion.button>
+  </motion.form>
 )}
         </div>
       </section>

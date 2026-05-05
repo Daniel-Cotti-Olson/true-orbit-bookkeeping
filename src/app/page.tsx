@@ -271,7 +271,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-xs font-black tracking-[0.3em] uppercase text-white/60 mb-2">{item.label}</p>
-                    <p className="text-2xl font-black text-white group-hover:text-gold transition-colors">{item.value}</p>
+                    <p className="text-2xl font-black text-gold group-hover:text-gold-light transition-colors">{item.value}</p>
                   </div>
                 </a>
               ))}

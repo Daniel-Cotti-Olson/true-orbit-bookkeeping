@@ -271,18 +271,20 @@ export default function Home() {
     key={i}
     onMouseEnter={() => setHoveredContact(i)}
     onMouseLeave={() => setHoveredContact(null)}
+    onTouchEnd={() => setHoveredContact(null)}
+    onClick={() => setClickedContact(i)}
     className="flex items-start gap-4 w-fit"
   >
     <div style={{
       width: "3.5rem",
       height: "3.5rem",
       borderRadius: "1rem",
-      backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
+      backgroundColor: clickedContact === i ? "rgba(255,255,255,0.05)" : hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
       border: "1px solid rgba(255,255,255,0.1)",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
+      color: clickedContact === i ? "#ffffff" : hoveredContact === i ? "#1e1b4b" : "#ffffff",
       transition: "all 0.5s",
       flexShrink: 0,
       marginTop: "0.25rem",

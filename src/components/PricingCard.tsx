@@ -20,10 +20,14 @@ const PricingCard = ({ name, price, description, features, cta, popular, index }
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       viewport={{ once: true }}
-      className={`p-10 rounded-3xl border ${popular ? 'gold-border scale-105 relative z-10 shadow-[0_20px_50px_rgba(0,0,0,0.3)]' : 'border-white/5 bg-white/[0.03]'} flex flex-col backdrop-blur-md`}
+      className={`p-10 rounded-3xl border flex flex-col backdrop-blur-md relative ${
+        popular 
+          ? 'gold-border shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-10' 
+          : 'border-white/5 bg-white/[0.03]'
+      }`}
     >
       {popular && (
-        <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-indigo-950 px-5 py-1.5 rounded-full text-xs font-black tracking-widest uppercase shadow-lg">
+        <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-indigo-950 px-5 py-1.5 rounded-full text-xs font-black tracking-widest uppercase shadow-lg whitespace-nowrap">
           Most Recommended
         </span>
       )}
@@ -46,7 +50,11 @@ const PricingCard = ({ name, price, description, features, cta, popular, index }
       <motion.button 
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className={`w-full py-4 rounded-2xl font-bold tracking-wide transition-all ${popular ? 'bg-gold text-indigo-950 hover:bg-gold-light shadow-lg' : 'gold-border hover:bg-white/5 text-white'}`}
+        className={`w-full py-4 rounded-2xl font-bold tracking-wide transition-all ${
+          popular 
+            ? 'bg-gold text-indigo-950 hover:bg-gold-light shadow-lg' 
+            : 'gold-border hover:bg-white/5 text-white'
+        }`}
       >
         {cta}
       </motion.button>

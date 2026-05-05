@@ -65,7 +65,7 @@ const plans = [
 
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const formRef = React.useRef<HTMLFormElement>(null);
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
@@ -286,11 +286,9 @@ export default function Home() {
     <p className="text-white/60 text-xl">We'll be in touch shortly.</p>
   </div>
 ) : (
-  <motion.form
+  <form
+  ref={formRef}
   onSubmit={handleSubmit}
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
   className="bg-white/[0.03] backdrop-blur-3xl p-12 md:p-16 rounded-[4rem] border border-white/10 space-y-10 shadow-[0_30px_100px_rgba(0,0,0,0.4)]"
 >
     <div className="grid md:grid-cols-2 gap-10">
@@ -321,15 +319,14 @@ export default function Home() {
       <textarea name="message" rows={5} className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium"></textarea>
     </div>
     <motion.button
-  type="submit"
-  onClick={() => document.querySelector('form')?.requestSubmit()}
+  type="button"
+  onClick={() => formRef.current?.requestSubmit()}
   whileHover={{ scale: 1.02 }}
   whileTap={{ scale: 0.98 }}
   className="w-full bg-gold text-indigo-950 py-7 rounded-3xl font-black text-xl hover:bg-gold-light hover:shadow-[0_0_50px_rgba(212,175,55,0.3)] transition-all uppercase tracking-widest"
 >
   Send Message
 </motion.button>
-  </motion.form>
 )}
         </div>
       </section>

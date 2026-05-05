@@ -300,16 +300,7 @@ export default function Home() {
       }}>
         {item.label}
       </p>
-      <a
-        href={item.href}
-        style={{
-          fontSize: "1.5rem",
-          fontWeight: 900,
-          color: hoveredContact === i ? "#F3E5AB" : "#D4AF37",
-          transition: "color 0.3s",
-          textDecoration: "none",
-        }}
-      >
+      
         {item.value}
       </a>
     </div>
@@ -335,7 +326,20 @@ export default function Home() {
                 <div className="grid md:grid-cols-2 gap-10">
                   <div className="space-y-4">
                     <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">First Name</label>
-                    <input type="text" name="firstName" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
+        <a
+  href={item.href}
+  onClick={(e) => {
+    e.preventDefault();
+    window.open(item.href, "_self");
+  }}
+  className="contact-link"
+  style={{
+    fontSize: "1.5rem",
+    fontWeight: 900,
+    transition: "color 0.3s",
+    textDecoration: "none",
+  }}
+>            <input type="text" name="firstName" className="w-full bg-white/5 border border-white/10 rounded-2xl p-6 focus:border-gold outline-none transition-all text-white text-lg font-medium" />
                   </div>
                   <div className="space-y-4">
                     <label className="text-xs font-black text-white/30 uppercase tracking-[0.3em] ml-1">Last Name</label>

@@ -71,7 +71,7 @@ const contactItems = [
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
-  const [clickedContact, setClickedContact] = useState<number | null>(null);
+  const [clickedContact, setClickedContact] = useState<Set<number>>(new Set());
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -306,7 +306,7 @@ export default function Home() {
         href={item.href}
         onClick={(e) => {
           e.preventDefault();
-          setClickedContact(i);
+          setClickedContact(prev => new Set(prev).add(i));
           window.open(item.href, "_self");
         }}
         style={{
@@ -314,7 +314,7 @@ export default function Home() {
           fontWeight: 900,
           textDecoration: "none",
           transition: "color 0.3s",
-          color: clickedContact === i ? "#9A7B2A" : hoveredContact === i ? "#F3E5AB" : "#D4AF37",
+          color: clickedContact.has(i) ? "#9A7B2A" : hoveredContact === i ? "#F3E5AB" : "#D4AF37",
         }}
       >
         {item.value}

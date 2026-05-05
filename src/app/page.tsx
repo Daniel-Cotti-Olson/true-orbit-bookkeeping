@@ -272,7 +272,7 @@ export default function Home() {
                     style={{ textDecoration: "none" }}
                     onMouseEnter={() => setHoveredContact(i)}
                     onMouseLeave={() => setHoveredContact(null)}
-                    className="flex items-center gap-8 group w-fit"
+                    className="flex items-start gap-8 w-fit"
                   >
                     <div style={{
                       width: "5rem",

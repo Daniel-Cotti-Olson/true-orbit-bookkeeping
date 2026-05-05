@@ -310,7 +310,7 @@ export default function Home() {
           window.open(item.href, "_self");
         }}
         style={{
-  fontSize: "1.5rem",
+  fontSize: "1.1rem",
   fontWeight: 900,
   textDecoration: clickedContact.has(i) ? "none" : "underline",
   transition: "color 0.3s",

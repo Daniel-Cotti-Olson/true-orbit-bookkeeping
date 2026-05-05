@@ -273,20 +273,21 @@ export default function Home() {
     className="flex items-start gap-8 w-fit"
   >
     <div style={{
-      width: "5rem",
-      height: "5rem",
-      borderRadius: "1.5rem",
-      backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
-      border: "1px solid rgba(255,255,255,0.1)",
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
-      transition: "all 0.5s",
-      flexShrink: 0,
-      boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
+  width: "3.5rem",
+  height: "3.5rem",
+  borderRadius: "1rem",
+  backgroundColor: hoveredContact === i ? "#D4AF37" : "rgba(255,255,255,0.05)",
+  border: "1px solid rgba(255,255,255,0.1)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  color: hoveredContact === i ? "#1e1b4b" : "#ffffff",
+  transition: "all 0.5s",
+  flexShrink: 0,
+  marginTop: "0.25rem",
+  boxShadow: "0 20px 25px -5px rgba(0,0,0,0.1)",
     }}>
-      <item.icon size={32} />
+      <item.icon size={22} />
     </div>
     <div>
       <p style={{

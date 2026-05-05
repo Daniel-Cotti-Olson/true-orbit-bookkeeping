@@ -25,15 +25,15 @@ a:visited {
 }
 
 .contact-link {
-  color: #D4AF37;
+  color: #D4AF37 !important;
 }
 
 .contact-link:visited {
-  color: #D4AF37;
+  color: #D4AF37 !important;
 }
 
 .contact-link:hover {
-  color: #F3E5AB;
+  color: #F3E5AB !important;
 }
 
 @layer utilities {

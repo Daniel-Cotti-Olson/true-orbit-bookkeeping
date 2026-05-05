@@ -13,17 +13,17 @@ interface PricingCardProps {
   index: number;
 }
 
-const PricingCard = ({ name, price, description, features, cta, popular, index }: PricingCardProps) => {
+const PricingCard = ({ name, price, description, features, popular, index }: PricingCardProps) => {
   return (
     <motion.div 
       initial={{ opacity: 0, scale: 0.95 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       viewport={{ once: true }}
-      className={`p-10 rounded-3xl border flex flex-col backdrop-blur-md relative ${
+      className={`p-10 rounded-3xl flex flex-col backdrop-blur-md relative ${
         popular 
-          ? 'gold-border shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-10' 
-          : 'border-white/5 bg-white/[0.03]'
+          ? 'gold-border shadow-[0_20px_50px_rgba(212,175,55,0.15)] z-10' 
+          : 'border border-white/10 bg-white/[0.03]'
       }`}
     >
       {popular && (
@@ -38,7 +38,7 @@ const PricingCard = ({ name, price, description, features, cta, popular, index }
       </div>
       <p className="text-sm text-white/60 mb-10 leading-relaxed">{description}</p>
       
-      <ul className="space-y-5 mb-12 flex-grow">
+      <ul className="space-y-5 flex-grow mb-10">
         {features.map((feature, i) => (
           <li key={i} className="flex items-start gap-4 text-sm text-white/80">
             <CheckCircle2 size={18} className="text-gold shrink-0 mt-0.5" />
@@ -47,17 +47,8 @@ const PricingCard = ({ name, price, description, features, cta, popular, index }
         ))}
       </ul>
 
-      <motion.button 
-        whileHover={{ scale: 1.02 }}
-        whileTap={{ scale: 0.98 }}
-        className={`w-full py-4 rounded-2xl font-bold tracking-wide transition-all ${
-          popular 
-            ? 'bg-gold text-indigo-950 hover:bg-gold-light shadow-lg' 
-            : 'gold-border hover:bg-white/5 text-white'
-        }`}
-      >
-        {cta}
-      </motion.button>
+      {/* Separator instead of button */}
+      <div className={`w-full h-px ${popular ? 'bg-gold/40' : 'bg-white/20'}`}></div>
     </motion.div>
   );
 };

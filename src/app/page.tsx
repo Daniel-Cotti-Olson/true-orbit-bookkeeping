@@ -269,11 +269,13 @@ export default function Home() {
                   <a
                     key={i}
                     href={item.href}
-                    style={{ textDecoration: "none" }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", display: "block" }}
                     onMouseEnter={() => setHoveredContact(i)}
                     onMouseLeave={() => setHoveredContact(null)}
                     className="flex items-start gap-8 w-fit"
-                  >
+                    >
                     <div style={{
                       width: "5rem",
                       height: "5rem",

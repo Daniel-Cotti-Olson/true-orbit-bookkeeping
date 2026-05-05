@@ -322,13 +322,13 @@ export default function Home() {
     </div>
     <motion.button
   type="submit"
+  onClick={() => document.querySelector('form')?.requestSubmit()}
   whileHover={{ scale: 1.02 }}
   whileTap={{ scale: 0.98 }}
   className="w-full bg-gold text-indigo-950 py-7 rounded-3xl font-black text-xl hover:bg-gold-light hover:shadow-[0_0_50px_rgba(212,175,55,0.3)] transition-all uppercase tracking-widest"
 >
-      Send Message
-    </motion.button>
-  </motion.form>
+  Send Message
+</motion.button>
 )}
         </div>
       </section>

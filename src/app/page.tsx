@@ -71,6 +71,7 @@ const contactItems = [
 export default function Home() {
   const [submitted, setSubmitted] = useState(false);
   const [hoveredContact, setHoveredContact] = useState<number | null>(null);
+  const [clickedContact, setClickedContact] = useState<number | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

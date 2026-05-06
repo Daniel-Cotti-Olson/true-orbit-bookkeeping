@@ -64,7 +64,7 @@ const plans = [
 ];
 
 const contactItems = [
-  { icon: MailOpen, label: "Email Us", value: "info@trueorbitbookkeeing.com", href: "mailto:info@trueorbitbookkeeing.com" },
+  { icon: MailOpen, label: "Email Us", value: "info@trueorbitbookkeeping.com", href: "mailto:info@trueorbitbookkeeping.com" },
   { icon: PhoneCall, label: "Call Us", value: "(503) 313-9953", href: "tel:5033139953" },
 ];
 

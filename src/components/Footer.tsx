@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-20 px-8 border-t border-white/5 bg-indigo-luxury relative overflow-hidden">
+    <footer className="w-full py-20 px-8 border-t border-white/5 bg-indigo-950 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-16">
@@ -36,7 +36,7 @@ const Footer = () => {
           <ul className="space-y-4 text-sm text-white/40">
             <li className="flex items-center gap-3">
               <Mail size={16} className="text-gold" />
-              info@trueorbitbookkeeing.com
+              info@trueorbitbookkeeping.com
             </li>
             <li className="flex items-center gap-3">
               <Phone size={16} className="text-gold" />

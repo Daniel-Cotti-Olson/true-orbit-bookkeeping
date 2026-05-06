@@ -18,7 +18,7 @@ const ServiceCard = ({ title, description, icon: Icon, index }: ServiceCardProps
       transition={{ delay: index * 0.1, duration: 0.5 }}
       viewport={{ once: true }}
       whileHover={{ y: -5, borderColor: "rgba(212, 175, 55, 0.4)", backgroundColor: "rgba(255, 255, 255, 0.05)" }}
-      className="p-10 rounded-3xl bg-white/[0.02] border border-white/5 backdrop-blur-sm transition-all group"
+      className="p-10 rounded-3xl bg-white/10 border border-white/10 transition-all group"
     >
       <div className="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center mb-8 group-hover:bg-gold group-hover:text-indigo-900 transition-colors">
         <Icon className="text-gold group-hover:text-inherit" size={28} />

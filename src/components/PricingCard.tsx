@@ -20,11 +20,11 @@ const PricingCard = ({ name, price, description, features, popular, index }: Pri
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay: index * 0.1, duration: 0.5 }}
       viewport={{ once: true }}
-      className={`p-10 rounded-3xl flex flex-col backdrop-blur-md relative ${
-        popular 
-          ? 'gold-border shadow-[0_20px_50px_rgba(212,175,55,0.15)] z-10' 
-          : 'border border-white/10 bg-white/[0.03]'
-      }`}
+      className={`p-10 rounded-3xl flex flex-col relative ${
+  popular 
+    ? 'gold-border shadow-[0_20px_50px_rgba(212,175,55,0.15)] z-10 bg-indigo-950' 
+    : 'border border-white/10 bg-white/10'
+}`}
     >
       {popular && (
         <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gold text-indigo-950 px-5 py-1.5 rounded-full text-xs font-black tracking-widest uppercase shadow-lg whitespace-nowrap">

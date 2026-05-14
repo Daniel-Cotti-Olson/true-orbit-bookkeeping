@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     title: "Full-Cycle Bookkeeping Services | True Orbit Bookkeeping",
     description:
       "Never wonder where your money went again. True Orbit handles every transaction, reconciliation, and ledger entry — remotely, accurately, and on time.",
-    url: "https://bitbookkeeping.com/services/full-cycle-bookkeeping",
+    url: "https://trueorbitbookkeeping.com/services/full-cycle-bookkeeping",
     siteName: "True Orbit Bookkeeping",
     type: "website",
   },
   alternates: {
-    canonical: "https://bitbookkeeping.com/services/full-cycle-bookkeeping",
+    canonical: "https://trueorbitbookkeeping.com/services/full-cycle-bookkeeping",
   },
 };
 
@@ -53,7 +53,7 @@ const serviceSchema = {
     },
     telephone: "+15033139953",
     email: "info@trueorbitbookkeeping.com",
-    url: "https://bitbookkeeping.com",
+    url: "https://trueorbitbookkeeping.com",
     areaServed: "United States",
   },
   serviceType: "Bookkeeping",

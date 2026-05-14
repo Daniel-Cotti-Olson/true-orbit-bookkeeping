@@ -896,20 +896,20 @@ export default function BookkeepingPage() {
                   <div className="form-row">
                     <div className="form-field">
                       <label className="form-label">First Name</label>
-                      <input className="form-input" type="text" name="firstName" placeholder="" />
+                      <input className="form-input" type="text" name="firstName" />
                     </div>
                     <div className="form-field">
                       <label className="form-label">Last Name</label>
-                      <input className="form-input" type="text" name="lastName" placeholder="" />
+                      <input className="form-input" type="text" name="lastName" />
                     </div>
                   </div>
                   <div className="form-field">
                     <label className="form-label">Business Email</label>
-                    <input className="form-input" type="email" name="email" placeholder="" />
+                    <input className="form-input" type="email" name="email" />
                   </div>
                   <div className="form-field">
                     <label className="form-label">Phone Number</label>
-                    <input className="form-input" type="tel" name="phone" placeholder="" />
+                    <input className="form-input" type="tel" name="phone" />
                   </div>
                   <div className="form-field">
                     <label className="form-label">Service Interest</label>

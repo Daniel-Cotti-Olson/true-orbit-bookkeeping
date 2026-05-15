@@ -87,37 +87,37 @@ const services = [
   {
     icon: <BookOpen size={28} />,
     title: "Full-Cycle Bookkeeping",
-    href: "/services/full-cycle-bookkeeping-page",
+    href: "/services/full-cycle-bookkeeping",
     desc: "Meticulous recording of all financial transactions, ensuring your ledgers are always accurate and up-to-date. Never wonder where your money went again.",
   },
   {
     icon: <TrendingUp size={28} />,
     title: "Financial Strategy",
-    href: "/services/financial-strategy-page",
+    href: "/services/financial-strategy",
     desc: "Deep-dive analysis and cash flow forecasting to help you make informed decisions for future growth. Your numbers, translated into action.",
   },
   {
     icon: <FileText size={28} />,
     title: "Tax Readiness",
-    href: "/services/tax-readiness-page",
+    href: "/services/tax-readiness",
     desc: "Organization of financial records to ensure a seamless tax season with maximum eligible deductions. No surprises, no scrambling.",
   },
   {
     icon: <BarChart2 size={28} />,
     title: "Financial Reporting",
-    href: "/services/financial-reporting-page",
+    href: "/services/financial-reporting",
     desc: "Clear, timely financial statements — P&L, balance sheet, cash flow — formatted for business owners who need answers, not accounting jargon.",
   },
   {
     icon: <Calculator size={28} />,
     title: "Accounts Payable & Receivable",
-    href: "/services/accounts-payable-receivable-page",
+    href: "/services/accounts-payable-receivable",
     desc: "Systematic management of what you owe and what you're owed. Keep vendor relationships strong and cash flow predictable.",
   },
   {
     icon: <Shield size={28} />,
     title: "Audit Support",
-    href: "/services/audit-support-page",
+    href: "/services/audit-support",
     desc: "Should you ever face an audit, your records will be immaculate, organized, and defensible. We keep everything audit-ready at all times.",
   },
 ];
@@ -655,11 +655,11 @@ export default function HomePage() {
           <div>
             <div className="footer-col-title">Services</div>
             <ul className="footer-links">
-              <li><Link href="/services/full-cycle-bookkeeping-page">Full-Cycle Bookkeeping</Link></li>
-              <li><Link href="/services/financial-strategy-page">Financial Strategy</Link></li>
-              <li><Link href="/services/tax-readiness-page">Tax Readiness</Link></li>
-              <li><Link href="/services/financial-reporting-page">Financial Reporting</Link></li>
-              <li><Link href="/services/accounts-payable-receivable-page">AP & Receivable</Link></li>
+              <li><Link href="/services/full-cycle-bookkeeping">Full-Cycle Bookkeeping</Link></li>
+              <li><Link href="/services/financial-strategy">Financial Strategy</Link></li>
+              <li><Link href="/services/tax-readiness">Tax Readiness</Link></li>
+              <li><Link href="/services/financial-reporting">Financial Reporting</Link></li>
+              <li><Link href="/services/accounts-payable-receivable">AP & Receivable</Link></li>
               <li><Link href="/services/audit-support">Audit Support</Link></li>
             </ul>
           </div>
